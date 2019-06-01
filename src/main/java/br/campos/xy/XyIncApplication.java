@@ -1,6 +1,7 @@
 package br.campos.xy;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.stereotype.Controller;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 @SpringBootApplication
+@EnableAutoConfiguration
 @EnableMongoRepositories(basePackages = "br.campos.xy.repository")
 public class XyIncApplication {
 
