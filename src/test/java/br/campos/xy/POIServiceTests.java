@@ -14,6 +14,7 @@ import br.campos.xy.service.abst.IPOIService;
 import br.campos.xy.util.XYException;
 
 /**
+ * Testes para o componente IPOIService e POIService
  * 
  * @author Caio
  */
@@ -24,7 +25,8 @@ public class POIServiceTests {
 	@Autowired
 	IPOIService poiService;
 
-	//@Test
+	// Testes em create
+	@Test
 	public void create() throws XYException {
 		final Double mOne = Double.valueOf(-1);
 		final Double dValue = Double.valueOf(1435674.003);
@@ -67,18 +69,17 @@ public class POIServiceTests {
 			POIDTO dto = new POIDTO("", dValue, dValue);
 			poiService.create(dto);
 		});
-		POIDTO dtoO = new POIDTO("F", dValue, dValue);
-		assertNotNull(poiService.create(dtoO));
-		assertThrows(XYException.class, () -> {
-			POIDTO dto = new POIDTO("F", dValue, dValue);
-			poiService.create(dto);
-		});
-		dtoO = new POIDTO("G", 0D, 10D);
-		assertNotNull(poiService.create(dtoO));
-		dtoO = new POIDTO("H", 10D, 0D);
-		assertNotNull(poiService.create(dtoO));
+		// Desabilitado para base em atividade
+		/*
+		 * POIDTO dtoO = new POIDTO("F", dValue, dValue);
+		 * assertNotNull(poiService.create(dtoO)); assertThrows(XYException.class, () ->
+		 * { POIDTO dto = new POIDTO("F", dValue, dValue); poiService.create(dto); });
+		 * dtoO = new POIDTO("G", 0D, 10D); assertNotNull(poiService.create(dtoO)); dtoO
+		 * = new POIDTO("H", 10D, 0D); assertNotNull(poiService.create(dtoO));
+		 */
 	}
 
+	// Testes em update
 	@Test
 	public void update() throws XYException {
 		final Double mOne = Double.valueOf(-1);
@@ -92,10 +93,6 @@ public class POIServiceTests {
 		});
 		assertThrows(XYException.class, () -> {
 			POIDTO dto = new POIDTO("", dValue, dValue);
-			poiService.update(dto);
-		});
-		assertThrows(XYException.class, () -> {
-			POIDTO dto = new POIDTO("A", dValue, dValue);
 			poiService.update(dto);
 		});
 		assertThrows(XYException.class, () -> {
@@ -114,10 +111,15 @@ public class POIServiceTests {
 			POIDTO dto = new POIDTO("F", dValue, mOne);
 			poiService.update(dto);
 		});
-		POIDTO dtoO = new POIDTO("F", 1D, 10D);
-		assertNotNull(poiService.update(dtoO));
+		// Desabilitado para base em atividade
+		/*
+		 * assertThrows(XYException.class, () -> { POIDTO dto = new POIDTO("A", dValue,
+		 * dValue); poiService.update(dto); }); POIDTO dtoO = new POIDTO("F", 1D, 10D);
+		 * assertNotNull(poiService.update(dtoO));
+		 */
 	}
 
+	// Testes em find e findDTO
 	@Test
 	public void findDTO() throws XYException {
 		assertThrows(XYException.class, () -> {
@@ -131,20 +133,22 @@ public class POIServiceTests {
 			POIDTO dto = new POIDTO("", null, null);
 			poiService.findDTO(dto);
 		});
-		assertThrows(XYException.class, () -> {
-			POIDTO dto = new POIDTO("A", null, null);
-			poiService.findDTO(dto);
-		});
-		POIDTO dtoO = new POIDTO("H", null, null);
-		assertNotEquals(poiService.findDTO(dtoO).toString(), "POIDTO(nome=H, x=10, y=0)");
-
-		assertTrue(poiService.findDTO(0D, 0D, 0D).isEmpty());
-		assertTrue(poiService.findDTO(0D, 0D, 10D).size() == 2);
-
-		assertTrue(poiService.findDTO().size() == 3);
+		// Desabilitado para base em atividade
+		/*
+		 * assertThrows(XYException.class, () -> { POIDTO dto = new POIDTO("A", null,
+		 * null); poiService.findDTO(dto); }); POIDTO dtoO = new POIDTO("H", null,
+		 * null); assertNotEquals(poiService.findDTO(dtoO).toString(),
+		 * "POIDTO(nome=H, x=10, y=0)");
+		 * 
+		 * assertTrue(poiService.findDTO(0D, 0D, 0D).isEmpty());
+		 * assertTrue(poiService.findDTO(0D, 0D, 10D).size() == 2);
+		 * 
+		 * assertTrue(poiService.findDTO().size() == 3);
+		 */
 	}
 
-	//@Test
+	// Testes em delete
+	@Test
 	public void delete() throws XYException {
 		assertThrows(XYException.class, () -> {
 			poiService.delete(null);
@@ -157,16 +161,18 @@ public class POIServiceTests {
 			POIDTO dto = new POIDTO("", null, null);
 			poiService.delete(dto);
 		});
-		assertThrows(XYException.class, () -> {
-			POIDTO dto = new POIDTO("A", null, null);
-			poiService.delete(dto);
-		});
-		POIDTO dtoO = new POIDTO("G", null, null);
-		
-		poiService.delete(dtoO);
+		// Desabilitado para base em atividade
+		/*
+		 * assertThrows(XYException.class, () -> { POIDTO dto = new POIDTO("A", null,
+		 * null); poiService.delete(dto); }); POIDTO dtoO = new POIDTO("G", null, null);
+		 * 
+		 * poiService.delete(dtoO);
+		 */
 	}
 
-	//@Test
+	// Desabilitado para não alterar a base de dados
+	// Testes em deleteAll
+	// @Test
 	public void deleteAll() throws XYException {
 		poiService.deleteAll();
 	}
