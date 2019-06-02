@@ -1,6 +1,6 @@
 # xy-inc
 
-Software de gerência de Pontos de Referência
+Software de gerência de Pontos de Interesse
 
 ## Executando:
 
