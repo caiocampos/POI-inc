@@ -12,6 +12,11 @@ Com o Maven configurado basta executar o seguinte comando na pasta do projeto:
 
 > mvn -Dmaven.test.skip=true install spring-boot:run
 
+## Atenção:
+
+Foi disponibilizado um usuário temporário para um Cluster no MongoDB Atlas para testes, o usuário terá acesso revogado depois de alguns dias, caso o projeto não execute por causa de autenticação no MongoDB por favor altere as configurações no arquivo:
+> xy-inc/src/main/resources/application.properties
+
 ## Testando:
 
 Para facilitar o teste, foi disponibilizado um arquivo de coleção do Postman para ser importado
