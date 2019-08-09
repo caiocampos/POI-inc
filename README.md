@@ -1,4 +1,4 @@
-# xy-inc
+# POI-inc
 
 Software de gerência de Pontos de Interesse
 
@@ -21,7 +21,7 @@ Com o Maven configurado basta executar o seguinte comando na pasta do projeto:
 
 Para facilitar o teste, foi disponibilizado um arquivo de coleção do Postman para ser importado
 
-https://github.com/caiocampos/xy-inc/blob/master/XY-inc.postman_collection.json
+https://github.com/caiocampos/POI-inc/blob/master/POI-inc.postman_collection.json
 
 Para instalar o Postman e importar a coleção siga o tutoriai a seguir:
 
