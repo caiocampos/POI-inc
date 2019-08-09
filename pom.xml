@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.campos</groupId>
-	<artifactId>xy-inc</artifactId>
+	<artifactId>POI-inc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>xy-inc</name>
+	<name>POI-inc</name>
 	<description>Cadastro de pontos de interesse</description>
 
 	<properties>
