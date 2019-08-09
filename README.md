@@ -10,12 +10,12 @@ http://luizricardo.org/2014/06/instalando-configurando-e-usando-o-maven-para-ger
 
 Com o Maven configurado basta executar o seguinte comando na pasta do projeto:
 
+- Linux
+> SPRING_APPLICATION_JSON='{"mongoUser":"###","mongoUserP":"###"}' mvn -Dmaven.test.skip=true install spring-boot:run
+
+- Windows
+> set SPRING_APPLICATION_JSON={"mongoUser":"###","mongoUserP":"###"}
 > mvn -Dmaven.test.skip=true install spring-boot:run
-
-## Atenção:
-
-Foi disponibilizado um usuário temporário para um Cluster no MongoDB Atlas para testes, o usuário terá acesso revogado depois de alguns dias, caso o projeto não execute por causa de autenticação no MongoDB por favor altere as configurações no arquivo:
-> xy-inc/src/main/resources/application.properties
 
 ## Testando:
 
