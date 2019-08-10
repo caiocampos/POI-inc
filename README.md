@@ -1,5 +1,7 @@
 # POI-inc
 
+[![License](https://img.shields.io/github/license/caiocampos/POI-inc.svg)](LICENSE)
+
 Software de gerência de Pontos de Interesse
 
 ## Executando:
