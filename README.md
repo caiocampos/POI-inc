@@ -1,6 +1,7 @@
 # POI-inc
 
 [![DepShield Badge](https://depshield.sonatype.org/badges/caiocampos/POI-inc/depshield.svg)](https://depshield.github.io)
+[![GuardRails Badge](https://badges.guardrails.io/caiocampos/POI-inc.svg)](https://www.guardrails.io/)
 [![License](https://img.shields.io/github/license/caiocampos/POI-inc.svg)](LICENSE)
 
 Software de gerência de Pontos de Interesse
