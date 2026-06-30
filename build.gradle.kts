@@ -37,3 +37,7 @@ dependencies {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
+springBoot {
+    mainClass.set("br.campos.poi.POIIncApplication")
+}
