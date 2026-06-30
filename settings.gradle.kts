@@ -1,1 +1,1 @@
-rootProject.name = "POI-inc"
+rootProject.name = "POI_inc"
