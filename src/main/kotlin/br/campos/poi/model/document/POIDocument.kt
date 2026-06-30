@@ -34,7 +34,7 @@ class POIDocument() : AbstractDocument(), Serializable {
 	/**
 	 * Localização [X,Y]
 	 */
-	@GeoSpatialIndexed(min = 0.0, max = Int.MAX_VALUE.toDouble())
+	@GeoSpatialIndexed(min = 0, max = Int.MAX_VALUE)
 	var location: Array<Double?> = arrayOfNulls(2)
 
 	/**
