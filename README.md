@@ -9,7 +9,7 @@ Software de gerência de Pontos de Interesse
 ### Pré-requisitos
 - JDK 25 ou mais recente instalado
 - Gradle instalado
-- MongoDB local rodando em `localhost:27017` (perfil `dev`) — ou acesso ao Atlas (perfil `prod`)
+- MongoDB local rodando em `localhost:27017` (perfil `dev`), ou acesso ao Atlas (perfil `prod`)
 
 ### Build e testes
 
