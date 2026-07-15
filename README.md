@@ -7,18 +7,9 @@ Software de gerência de Pontos de Interesse
 ## Como rodar:
 
 ### Pré-requisitos
-- JDK 21 instalado
+- JDK 25 ou mais recente instalado
+- Gradle instalado
 - MongoDB local rodando em `localhost:27017` (perfil `dev`) — ou acesso ao Atlas (perfil `prod`)
-
-### Gerar o Gradle Wrapper
-
-Por restrição do ambiente onde este código foi gerado, **o binário `gradle-wrapper.jar` não pôde ser baixado** (sem acesso à rede do Gradle). O arquivo `gradle/wrapper/gradle-wrapper.properties` já está configurado para o Gradle 9.6.1 (compatível com Java 21). Para gerar o wrapper completo, rode uma vez (com um Gradle local instalado, ex: via SDKMAN `sdk install gradle`):
-
-```bash
-gradle wrapper --gradle-version 9.6.1
-```
-
-Ou simplesmente abra o projeto no IntelliJ IDEA — ele detecta o `gradle-wrapper.properties` e baixa a distribuição automaticamente.
 
 ### Build e testes
 
