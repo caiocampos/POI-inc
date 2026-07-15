@@ -10,7 +10,7 @@ version = "0.0.1-SNAPSHOT"
 description = "Cadastro de pontos de interesse"
 
 kotlin {
-	jvmToolchain(21)
+	jvmToolchain(25)
 	compilerOptions {
 		freeCompilerArgs.addAll("-Xjsr305=strict")
 	}
